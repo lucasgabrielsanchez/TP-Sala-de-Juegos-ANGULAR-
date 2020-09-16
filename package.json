@@ -10,7 +10,7 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "lite": "lite-server",
-    "postinstall": "ng build --prod --aot",
+    "postinstall": "ng build --output-path angularapp --aot --prod",
     "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix"
   },
   "private": true,
@@ -35,7 +35,10 @@
     "path": "^0.12.7",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
-    "zone.js": "^0.11.1"
+    "zone.js": "^0.11.1",
+    "@angular/cli": "10.1.1",
+    "@angular/compiler-cli": "10.1.1",
+    "typescript": "4.0.2"
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -67,7 +70,7 @@
     "typescript": "4.0.2"
   },
   "engines": {
-    "node": "12.14.1",
+    "node": "12.16.0",
     "npm": "6.13.4"
   }
 }
