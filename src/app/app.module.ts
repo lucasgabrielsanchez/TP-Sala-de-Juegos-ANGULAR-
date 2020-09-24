@@ -60,6 +60,7 @@ import { ButtonModule } from "primeng/button";
 import { SplitButtonModule } from "primeng/splitbutton";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CarouselModule } from "primeng/carousel";
+import { VeloclickraptorComponent } from './componentes/veloclickraptor/veloclickraptor.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { CarouselModule } from "primeng/carousel";
     JugadoresListadoComponent,
     InputJugadoresComponent,
     SexoPipe,
+    VeloclickraptorComponent,
   ],
   imports: [
     BrowserModule,

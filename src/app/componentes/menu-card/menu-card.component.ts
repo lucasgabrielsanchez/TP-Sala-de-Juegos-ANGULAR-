@@ -11,7 +11,7 @@ export class MenuCardComponent implements OnInit {
       img: "./assets/imagenes/cerebro.jpg",
       titulo: "VeloClickRaptor",
       descripcion: "Juego de agilidad manual",
-      destino: "",
+      destino: "Veloclickraptor",
     },
     {
       img: "./assets/imagenes/cerebro.jpg",
@@ -70,6 +70,8 @@ export class MenuCardComponent implements OnInit {
         break;
       case "Anagrama":
         this.router.navigate(["/Juegos/Anagrama"]);
+      case "Veloclickraptor":
+        this.router.navigate(["/Juegos/Veloclickraptor"]);
         break;
     }
   }
