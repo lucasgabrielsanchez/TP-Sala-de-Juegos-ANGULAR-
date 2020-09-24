@@ -1,10 +1,6 @@
 .panel
 {
-    height: 200px;
-    background-image: url("/TP_LAV4_2017/assets/imagenes/cabecera.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 140px;
     position: relative;
 }
 
@@ -32,4 +28,8 @@ cursor: pointer;
 .hero-text a:hover {
 background-color: #555;
 color: white;
+}
+
+.left-toolbar-edit > div{
+    margin-left: 5px;
 }
