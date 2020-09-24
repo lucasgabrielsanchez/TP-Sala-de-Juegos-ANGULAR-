@@ -59,6 +59,7 @@ import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
 import { SplitButtonModule } from "primeng/splitbutton";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CarouselModule } from "primeng/carousel";
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     RuteandoModule,
     HttpModule,
     BrowserAnimationsModule,
+    CarouselModule,
     ToolbarModule,
     ButtonModule,
     SplitButtonModule,
@@ -102,13 +104,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [
-    JuegoServiceService,
-    MiHttpService,
-    PaisesService,
-    ArchivosJugadoresService,
-    JugadoresService,
-  ],
+  providers: [JuegoServiceService, MiHttpService, PaisesService, ArchivosJugadoresService, JugadoresService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
