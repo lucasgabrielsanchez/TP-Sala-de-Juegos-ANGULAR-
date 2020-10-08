@@ -58,9 +58,13 @@ import { SexoPipe } from "./pipes/sexo.pipe";
 import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
 import { SplitButtonModule } from "primeng/splitbutton";
+import { CardModule } from 'primeng/card';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CarouselModule } from "primeng/carousel";
 import { VeloclickraptorComponent } from './componentes/veloclickraptor/veloclickraptor.component';
+import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { TatetiComponent } from './componentes/tateti/tateti.component';
+import { MemotestComponent } from './componentes/memotest/memotest.component';
 
 @NgModule({
   declarations: [
@@ -88,6 +92,9 @@ import { VeloclickraptorComponent } from './componentes/veloclickraptor/veloclic
     InputJugadoresComponent,
     SexoPipe,
     VeloclickraptorComponent,
+    PiedraPapelTijeraComponent,
+    TatetiComponent,
+    MemotestComponent,
   ],
   imports: [
     BrowserModule,
@@ -99,6 +106,7 @@ import { VeloclickraptorComponent } from './componentes/veloclickraptor/veloclic
     ToolbarModule,
     ButtonModule,
     SplitButtonModule,
+    CardModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys",
     }),

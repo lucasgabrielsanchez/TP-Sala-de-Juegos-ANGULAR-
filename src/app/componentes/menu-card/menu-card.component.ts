@@ -23,7 +23,7 @@ export class MenuCardComponent implements OnInit {
       img: "./assets/imagenes/ppt.jpg",
       titulo: "Piedra Papel o Tijera",
       descripcion: "Juega contra la máquina",
-      destino: "",
+      destino: "PiedraPapelTijera",
     },
     {
       img: "./assets/imagenes/adivina.png",
@@ -41,13 +41,13 @@ export class MenuCardComponent implements OnInit {
       img: "./assets/imagenes/cerebro.jpg",
       titulo: "TaTeTi",
       descripcion: "Juego de agilidad mental",
-      destino: "",
+      destino: "Tateti",
     },
     {
       img: "./assets/imagenes/cerebro.jpg",
       titulo: "Memotest",
       descripcion: "Juego de agilidad mental",
-      destino: "",
+      destino: "Memotest",
     },
   ];
 
@@ -56,11 +56,11 @@ export class MenuCardComponent implements OnInit {
   ngOnInit() {}
   Juego(tipo: string) {
     switch (tipo) {
-      case "Adivina":
-        this.router.navigate(["/Juegos/Adivina"]);
+      case "PiedraPapelTijera":
+        this.router.navigate(["/Juegos/PiedraPapelTijera"]);
         break;
-      case "Agilidad":
-        this.router.navigate(["/Juegos/Agilidad"]);
+      case "Tateti":
+        this.router.navigate(["/Juegos/Tateti"]);
         break;
       case "AdivinaMasListado":
         this.router.navigate(["/Juegos/AdivinaMasListado"]);
@@ -70,6 +70,10 @@ export class MenuCardComponent implements OnInit {
         break;
       case "Anagrama":
         this.router.navigate(["/Juegos/Anagrama"]);
+        break;
+      case "Memotest":
+        this.router.navigate(["/Juegos/Memotest"]);
+        break;
       case "Veloclickraptor":
         this.router.navigate(["/Juegos/Veloclickraptor"]);
         break;

@@ -23,6 +23,9 @@ import { MapaDeGoogleComponent } from "../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from "../componentes/jugadores-listado/jugadores-listado.component";
 import { AnagramaComponent } from "../componentes/anagrama/anagrama.component";
 import { VeloclickraptorComponent } from "../componentes/veloclickraptor/veloclickraptor.component";
+import { PiedraPapelTijeraComponent } from "../componentes/piedra-papel-tijera/piedra-papel-tijera.component";
+import { TatetiComponent } from "../componentes/tateti/tateti.component";
+import { MemotestComponent } from "../componentes/memotest/memotest.component"
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -41,12 +44,13 @@ const MiRuteo = [
     component: JuegosComponent,
     children: [
       { path: "", component: MenuCardComponent },
-      { path: "Adivina", component: AdivinaElNumeroComponent },
       { path: "AdivinaMasListado", component: AdivinaMasListadoComponent },
       { path: "AgilidadaMasListado", component: AgilidadMasListadoComponent },
-      { path: "Agilidad", component: AgilidadAritmeticaComponent },
+      { path: "PiedraPapelTijera", component: PiedraPapelTijeraComponent },
       { path: "Anagrama", component: AnagramaComponent },
+      { path: "Tateti", component: TatetiComponent },
       { path: "Veloclickraptor", component: VeloclickraptorComponent },
+      { path: "Memotest", component: MemotestComponent },
     ],
   },
   { path: "**", component: ErrorComponent },
