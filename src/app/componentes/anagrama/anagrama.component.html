@@ -1,3 +1,94 @@
-<p>
-  anagrama works!
-</p>
+<div class="p-d-flex p-jc-center">
+  <p-card [style]="{ width: '800px' }" class="p-shadow-12">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <div style="text-align: center; margin-bottom: 30px">
+      <h1><u>Anagrama</u></h1>
+    </div>
+    <div>
+      <!-- <button type="button" class="btn btn-danger mt-3 ml-3" (click)="nuevoJuego()" *ngIf="!mensajeAlUsuario">
+        Generar palabra mezclada
+      </button> -->
+      <div class="p-d-flex p-jc-center">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Generar palabra mezclada"
+          class="p-button-rounded"
+          (click)="nuevoJuego()"
+          *ngIf="!mensajeAlUsuario"
+        ></button>
+      </div>
+
+      <div class="p-d-flex p-jc-around" *ngIf="palabraSecretaMezclada" style="margin-top: 20px">
+        <div style="padding-top: 7px">
+          <h3>Palabra mezclada a adivinar:</h3>
+        </div>
+        <div>
+          <h1 style="color: yellow">{{ palabraSecretaMezclada | uppercase }}</h1>
+        </div>
+      </div>
+
+      <div class="row flex d-flex flex-column">
+        <div class="col recuadro text-center">
+          <form>
+            <div class="form-group" style="padding-top: 10px">
+              <label for="palabraIngresadaInput" class="text-white">Ingrese la palabra que crea correcta:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Coloque la palabra a probar"
+                autocomplete="off"
+                name="palabraIngresadaInput"
+                [(ngModel)]="palabraIngresada"
+                [disabled]="!palabraSecretaMezclada"
+              />
+
+              <button
+                pButton
+                pRipple
+                type="button"
+                label="Probar Suerte"
+                class="p-button-rounded p-button-success"
+                (click)="verificar()"
+                *ngIf="palabraIngresada"
+                style="margin-top: 20px"
+              ></button>
+            </div>
+          </form>
+        </div>
+        <!-- <div class="col">
+            {{ "Palabra Secreta para correccion por parte del profesor: " + palabraSecreta }}
+          </div> -->
+        <div
+          class="p-d-flex p-flex-column p-jc-center p-ai-center"
+          *ngIf="palabraSecretaMezclada && palabraSecreta"
+          style="margin-top: 20px"
+        >
+          <div style="margin-bottom: 15px;">
+            <button
+              pButton
+              pRipple
+              type="button"
+              label="Ayuda para profesor"
+              class="p-button-outlined p-button-warning"
+              (click)="mostrarAyuda = !mostrarAyuda"
+            ></button>
+          </div>
+          <div *ngIf="mostrarAyuda">
+            <h5>Palabra oculta: {{ palabraSecreta }}</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-d-flex p-jc-center" style="margin-top: 20px">
+        <h3 *ngIf="gano">
+          <strong style="background: green">¡GANÓ!</strong>
+        </h3>
+        <h3 *ngIf="mensajeAlUsuario">
+          <strong style="background: red">PERDIÓ</strong>
+        </h3>
+      </div>
+    </div>
+  </p-card>
+</div>
