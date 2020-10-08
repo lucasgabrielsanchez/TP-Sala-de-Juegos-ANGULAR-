@@ -1,0 +1,28 @@
+.imgPPT {
+  height: 120px;
+  width: 120px;
+  animation-name: animacionPPT;
+  animation-duration: 3s;
+}
+
+@keyframes animacionPPT {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  /* 50% 
+    { transform:  scale(0.5);
+     opacity: 0.5 
+      } */
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.focused:focus {
+  outline: 10px solid blue;
+}

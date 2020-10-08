@@ -1,1 +1,48 @@
-<p>piedra-papel-tijera works!</p>
+<div class="p-d-flex p-jc-center">
+  <p-card [style]="{ width: '600px' }" class="p-shadow-12">
+    <form>
+      <div [hidden]="nuevoJuego.eleccionOponente == null" class="p-d-flex p-jc-center">
+        <img
+          *ngIf="nuevoJuego.eleccionOponente == 'piedra'"
+          src="./assets/pptImg/piedra.jpg"
+          alt="piedra"
+          height="120"
+        />
+        <img *ngIf="nuevoJuego.eleccionOponente == 'papel'" src="./assets/pptImg/papel.jpg" alt="papel" height="120" />
+        <img
+          *ngIf="nuevoJuego.eleccionOponente == 'tijera'"
+          src="./assets/pptImg/tijera.jpg"
+          alt="tijera"
+          height="120"
+        />
+      </div>
+      <div class="p-d-flex p-jc-between" style="margin-top: 30px;">
+        <div (click)="generarEleccion(); elegirImagen('piedra')" tabindex="-1" class="focused">
+          <img src="./assets/pptImg/piedra.jpg" alt="piedra" class="imgPPT" />
+        </div>
+        <div (click)="generarEleccion(); elegirImagen('papel')" tabindex="-1" class="focused">
+          <img src="./assets/pptImg/papel.jpg" alt="papel" class="imgPPT" />
+        </div>
+        <div (click)="generarEleccion(); elegirImagen('tijera')" tabindex="-1" class="focused">
+          <img src="./assets/pptImg/tijera.jpg" alt="tijera" class="imgPPT" />
+        </div>
+      </div>
+
+      <div class="p-d-flex p-jc-center" style="margin-top: 30px">
+        <!-- <div *ngIf="nuevoJuego.gano">GANO!</div>
+        <div *ngIf="nuevoJuego.perdio">PERDIO!</div>
+        <div *ngIf="nuevoJuego.empato">EMPATO!</div> -->
+
+        <h3 *ngIf="nuevoJuego.gano">
+          <strong style="background: green">¡GANÓ!</strong>
+        </h3>
+        <h3 *ngIf="nuevoJuego.empato">
+            <strong style="background: rgb(168, 168, 9)">EMPATÓ</strong>
+          </h3>
+        <h3 *ngIf="nuevoJuego.perdio">
+          <strong style="background: red">PERDIÓ</strong>
+        </h3>
+      </div>
+    </form>
+  </p-card>
+</div>
