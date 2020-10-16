@@ -1,0 +1,57 @@
+.tablero {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 371px;
+}
+.card-item {
+  background-color: transparent;
+  margin: 1vw 1%;
+  width: 20%;
+  /* height: 14vw; */
+}
+.card-item.flip .card-inner {
+  transform: rotateY(180deg);
+  transition: transform 0.8s;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+.card-inner .frente,
+.card-inner .atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+.card-inner .frente {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 52%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+}
+.card-inner .atras {
+  background-color: rgb(22, 220, 255);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4vw;
+}
+@media screen and (max-width: 1400px) {
+  .card-item {
+    background-color: transparent;
+  }
+}
+
+p-card .p-card-content {
+  margin-top: -40px !important;
+}

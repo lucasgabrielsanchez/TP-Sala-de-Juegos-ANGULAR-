@@ -1,1 +1,39 @@
-<p>memotest works!</p>
+<div class="p-d-flex p-jc-center">
+  <p-card [style]="{ width: '800px' }" class="p-shadow-12">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <div style="text-align: center; margin-bottom: 10px; margin-top: -38px">
+      <h1><u>Memotest</u></h1>
+    </div>
+
+    <ul class="list-group text-center">
+      <li class="list-group-item">
+        <div class="tablero">
+          <div
+            class="card-item"
+            *ngFor="let carta of valoresDeLasCartas"
+            [class.flip]="carta.flip || carta.isCorrect"
+            (click)="onClick(carta)"
+          >
+            <div class="card-inner">
+              <div class="frente"></div>
+              <div class="atras">
+                <img src="./assets/kiwi.png" alt="" *ngIf="carta.letra === 'A'" />
+                <img src="./assets/manzana.png" alt="" *ngIf="carta.letra === 'B'" />
+                <img src="./assets/naranja.png" alt="" *ngIf="carta.letra === 'C'" />
+                <img src="./assets/sandia.png" alt="" *ngIf="carta.letra === 'D'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="p-d-flex p-flex-column p-jc-center" style="margin-top: 20px; margin-bottom: -24px;" *ngIf="termino">
+      <h3 class="p-mr-2 p-as-center">
+        <strong style="background: green">¡GANÓ!</strong>
+      </h3>
+      <!-- <button class="btn btn-danger" type="button" (click)="Reiniciar()">Jugar de nuevo</button> -->
+      <button pButton pRipple type="button" label="Jugar de nuevo" class="p-button-outlined p-button-Info"
+      (click)="Reiniciar()"></button>
+    </div>
+  </p-card>
+</div>

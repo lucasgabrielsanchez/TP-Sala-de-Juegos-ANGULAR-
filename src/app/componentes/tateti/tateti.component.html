@@ -1,1 +1,59 @@
-<p>tateti works!</p>
+<div class="p-d-flex p-jc-center">
+  <p-card [style]="{ width: '800px' }" class="p-shadow-12">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <div style="text-align: center; margin-bottom: 30px">
+      <h1><u>Ta Te Tí</u></h1>
+    </div>
+
+    <div>
+      <!-- <mat-grid-list cols="3" rowHeight="70px:70px">
+        <mat-grid-tile *ngFor="let cuadrado of cuadradosGrilla; let i = index" [colspan]="cuadrado.columnas"
+          [rowspan]="cuadrado.filas" [style.background]="cuadrado.color" (click)="usuarioColocaLaX(i)">
+          {{cuadrado.texto}}
+        </mat-grid-tile>
+      </mat-grid-list> -->
+
+      <div class="p-grid">
+        <div class="p-col-4" *ngFor="let cuadrado of cuadradosGrilla; let i = index" (click)="usuarioColocaLaX(i)">
+          <p-card [style]="{ background: 'white', height: '90px' }">
+            <div class="lalala">
+              <img style="max-height: 90px; max-width: 90px" [src]="cuadrado.texto" alt="" />
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </div>
+    <!-- <div *ngIf="ganoUsuario" class="bg-success text-center mt-5">
+      <h1 class="text-white">Ganaste!!</h1>
+    </div>
+    <div *ngIf="ganoPC" class="bg-danger text-center mt-5">
+      <h1 class="text-white">Perdiste!!</h1>
+    </div>
+    <div *ngIf="empate" class="bg-warning text-center mt-5">
+      <h1 class="text-white">Empataste!!</h1>
+    </div> -->
+    <div class="p-d-flex p-jc-center" style="margin-top: 20px">
+      <h3 *ngIf="ganoUsuario">
+        <strong style="background: green">¡GANÓ!</strong>
+      </h3>
+      <h3 *ngIf="empate">
+        <strong style="background: rgb(184, 184, 32)">¡EMPATÓ!</strong>
+      </h3>
+      <h3 *ngIf="ganoPC">
+        <strong style="background: red">PERDIÓ</strong>
+      </h3>
+    </div>
+    <div class="row text-center">
+      <div class="col">
+        <button
+          *ngIf="ganoPC || ganoUsuario || empate"
+          type="button"
+          class="btn btn-outline-warning mx-5 my-1"
+          (click)="reiniciar()"
+        >
+          Reiniciar
+        </button>
+      </div>
+    </div>
+  </p-card>
+</div>

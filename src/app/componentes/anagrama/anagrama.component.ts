@@ -41,9 +41,8 @@ export class AnagramaComponent implements OnInit {
     this.gano = false;
     this.palabraSecreta = this.palabrasParaAdivinar[Math.floor(Math.random() * this.palabrasParaAdivinar?.length)];
 
-    console.log('this.palabraSecreta: ', this.palabraSecreta);
-
-    let arrayDeCaracteresOrdenados = [...this.palabraSecreta];
+    // let arrayDeCaracteresOrdenados = [...this.palabraSecreta];
+    let arrayDeCaracteresOrdenados = Array.from(this.palabraSecreta);
 
     this.palabraSecretaMezclada = arrayDeCaracteresOrdenados
       .map((a) => ({ sort: Math.random(), value: a })) //Le agrego una key numerica aleatoria
