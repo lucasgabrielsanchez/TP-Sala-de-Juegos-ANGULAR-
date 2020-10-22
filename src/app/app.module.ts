@@ -57,14 +57,15 @@ import { SexoPipe } from "./pipes/sexo.pipe";
 //Imports de PrimeNG
 import { ToolbarModule } from "primeng/toolbar";
 import { ButtonModule } from "primeng/button";
+import { InputTextModule } from "primeng/inputtext";
 import { SplitButtonModule } from "primeng/splitbutton";
-import { CardModule } from 'primeng/card';
+import { CardModule } from "primeng/card";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { CarouselModule } from "primeng/carousel";
-import { VeloclickraptorComponent } from './componentes/veloclickraptor/veloclickraptor.component';
-import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
-import { TatetiComponent } from './componentes/tateti/tateti.component';
-import { MemotestComponent } from './componentes/memotest/memotest.component';
+import { VeloclickraptorComponent } from "./componentes/veloclickraptor/veloclickraptor.component";
+import { PiedraPapelTijeraComponent } from "./componentes/piedra-papel-tijera/piedra-papel-tijera.component";
+import { TatetiComponent } from "./componentes/tateti/tateti.component";
+import { MemotestComponent } from "./componentes/memotest/memotest.component";
 
 @NgModule({
   declarations: [
@@ -105,6 +106,7 @@ import { MemotestComponent } from './componentes/memotest/memotest.component';
     CarouselModule,
     ToolbarModule,
     ButtonModule,
+    InputTextModule,
     SplitButtonModule,
     CardModule,
     AgmCoreModule.forRoot({
